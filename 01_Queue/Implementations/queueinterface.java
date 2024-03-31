@@ -17,7 +17,7 @@ public class queueinterface {
 
         for(int i = 5; i<10; i++)
             queue.add(i);
-        System.out.println(queue.size()+ " is size of the queue");
+    System.out.println(queue.size()+ " is size of the queue");
         //All the elements of the queue
         System.out.println("Elements in queue : " + queue);
 
