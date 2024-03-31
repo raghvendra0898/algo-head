@@ -3,7 +3,7 @@ import java.util.Queue;
 import java.util.Stack;
 
 public class ReversedQueue {
-    static void reverse(Queue <Integer> q)
+    static void iter_reverse(Queue <Integer> q)
     {
         Stack<Integer>s = new Stack<>();
         while(!q.isEmpty())
@@ -19,6 +19,22 @@ public class ReversedQueue {
  
     }
 
+    static void recur_reverse(Queue <Integer> q)
+    {
+        if(q.isEmpty())
+            return;
+        else
+        {
+            int x = q.peek();
+            q.poll();
+            recur_reverse(q);
+            q.add(x);
+        }
+
+        System.out.println("Reversed queue using recursion : "+q);
+
+    }
+
     public static void main(String args[])
     {
         Queue <Integer> q = new LinkedList<Integer>();
@@ -30,7 +46,8 @@ public class ReversedQueue {
 
         System.out.println("Elements in original queue : "+ q);
 
-        reverse(q);
+        iter_reverse(q);
+        recur_reverse(q);
 
 
     }
