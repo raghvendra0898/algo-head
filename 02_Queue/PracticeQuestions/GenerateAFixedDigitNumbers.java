@@ -1,6 +1,6 @@
 //Generating 'n' numbers having digit 5 and 6 in it only.
-
-import java.util.*;
+import java.util.LinkedList;
+import java.util.Queue;
 
 
 
