@@ -13,12 +13,18 @@ class Stack
 
     void push(int x)
     {
+        if(top==cap-1)
+            System.out.println("Stack is full");
         top++;
         arr[top] = x;
     }
 
     int pop()
     {
+        if(top==-1)
+        {
+            return -1;
+        }
         int res = arr[top];
         top--;
         return res;
